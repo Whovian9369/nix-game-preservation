@@ -21,14 +21,18 @@ Included projects:
   - `dic-release`
     - Just DiscImageCreator (using Release commit).
   - `dic-release-full`
-    - DiscImageCreator (using Release commit) EccEdc (see below), and Unscrambler (see below).
+    - DiscImageCreator (using Release commit), DVDAuth, EccEdc, and Unscrambler.
   - `dic-git`
     - Just DiscImageCreator (using latest commit).
   - `dic-git-full`
-    - DiscImageCreator (using latest commit), EccEdc (see below), and Unscrambler (see below).
+    - DiscImageCreator (using Release commit), DVDAuth, EccEdc, and Unscrambler.
 
 - [EccEdc](https://github.com/saramibreak/EccEdc) (by saramibreak) - "checks or fix user data of the 2048 byte per sector of CD by using ecc/edc"
   - `dic-eccedc`
+    - Latest release commit, which also happens to be the latest repository commit.
+
+- [DVDAuth](https://github.com/saramibreak/DVDAuth) (by saramibreak) - "This is CSS or CPPM or CPRM authentication tool"
+  - `dic-dvdauth`
     - Latest release commit, which also happens to be the latest repository commit.
 
 - [Unscrambler](https://github.com/saramibreak/unscrambler) (by saramibreak) - "unscramble not standard IVs scrambled DVDs thru bruteforce, intended for Gamecube/WII Optical Disks."
