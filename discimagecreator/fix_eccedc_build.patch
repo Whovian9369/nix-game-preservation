@@ -1,0 +1,12 @@
+diff --git a/EccEdc/_external/ecm.cpp b/EccEdc/_external/ecm.cpp
+index 6e7e0a8..f3f514c 100644
+--- a/EccEdc/_external/ecm.cpp
++++ b/EccEdc/_external/ecm.cpp
+@@ -19,6 +19,7 @@
+ ////////////////////////////////////////////////////////////////////////////////
+ 
+ #include "ecm.h"
++#include <cstdint>
+ #ifdef __linux__
+ #pragma GCC diagnostic ignored "-Wconversion"
+ #endif

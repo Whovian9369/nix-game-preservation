@@ -1,0 +1,4 @@
+/result*
+# Output build symlink
+*.log
+# Lot files for debugging
