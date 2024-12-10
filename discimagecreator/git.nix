@@ -22,8 +22,11 @@ stdenv.mkDerivation {
     ninja
   ];
 
-  preBuild = ''
-    cp -r Release_ANSI/Doc $out/doc
+  postPatch = ''
+    mkdir -p $out/share/DiscImageCreator
+    cp LICENSE README.md Release_ANSI/C2ErrorProtect.txt Release_ANSI/ReadErrorProtect.txt $out/share/DiscImageCreator/
+    cp "Release_ANSI/DVDRawBruteforce - Drive Sheet - Sheet1.tsv" $out/share/DiscImageCreator/
+    cp -r Release_ANSI/Doc $out/share/DiscImageCreator/
   '';
 
   meta = {
