@@ -37,6 +37,10 @@
       dic-unscrambler = pkgs.callPackage discimagecreator/unscrambler.nix {};
       dic-dvdauth = pkgs.callPackage discimagecreator/dvdauth.nix {};
 
+      # NDecrypt
+      ndecrypt-release = pkgs.callPackage ndecrypt/package.nix {};
+      ndecrypt-git = pkgs.callPackage ndecrypt/git.nix {};
+
       # Redumper
       redumper = self.packages.x86_64-linux.redumper-bin;
       redumper-bin = nixpkgs.legacyPackages.x86_64-linux.callPackage redumper/bin.nix {};

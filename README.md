@@ -6,7 +6,7 @@ Notes:
 - All notes here are likely correct as of latest edit, but no promises are made.
   - If you require a more recent version than what is provided in this flake, you will likely have to do that process yourself.
 
-Included projects:
+## Included projects:
 - [Redumper](https://github.com/superg/redumper) - "Low level CD dumper utility"
   - `redumper`
     - Defaults to `redumper-bin`.
@@ -15,6 +15,13 @@ Included projects:
   - `redumper-git`
     - Using latest commit.
 
+- [NDecrypt](https://github.com/SabreTools/NDecrypt) - "Cartridge encrypt/decrypt"
+  - `ndecrypt-git`
+    - Using latest commit.
+  - `ndecrypt-release`
+    - Using release commit.
+
+### DiscImageCreator
 - [DiscImageCreator](https://github.com/saramibreak/DiscImageCreator) - "disc (CD, GD, DVD, HD-DVD, BD, GC/Wii, XBOX, XBOX 360) and disk (Floppy, MO, USB etc) image creation tool"
   - `discimagecreator`
     - Defaults to `dic-release-full`.
