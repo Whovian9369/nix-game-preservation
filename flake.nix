@@ -13,12 +13,12 @@
   in
   {
     packages.x86_64-linux = {
-      # DiscImageCreator
+    # DiscImageCreator
       discimagecreator = self.packages.x86_64-linux.dic-release-full;
       dic-release = pkgs.callPackage discimagecreator/package.nix {};
       dic-release-full = pkgs.symlinkJoin {
         name = "DiscImageCreator-Full";
-        paths = [ self.packages.x86_64-linux.dic-release self.packages.x86_64-linux.dic-eccedc  self.packages.x86_64-linux.dic-unscrambler self.packages.x86_64-linux.dic-dvdauth ];
+        paths = [ self.packages.x86_64-linux.dic-release self.packages.x86_64-linux.dic-eccedc self.packages.x86_64-linux.dic-unscrambler self.packages.x86_64-linux.dic-dvdauth ];
         meta = {
           description = "DiscImageCreator + EccEdc + Unscrambler + DVDAuth";
           homepage = "https://github.com/saramibreak/DiscImageCreator";
@@ -37,14 +37,26 @@
       dic-unscrambler = pkgs.callPackage discimagecreator/unscrambler.nix {};
       dic-dvdauth = pkgs.callPackage discimagecreator/dvdauth.nix {};
 
-      # NDecrypt
-      ndecrypt-release = pkgs.callPackage ndecrypt/package.nix {};
+    # NDecrypt
+      ndecrypt = self.packages.x86_64-linux.ndecrypt-release;
+      ndecrypt-release = pkgs.callPackage ndecrypt/release.nix {};
       ndecrypt-git = pkgs.callPackage ndecrypt/git.nix {};
 
-      # Redumper
-      redumper = self.packages.x86_64-linux.redumper-bin;
-      redumper-bin = nixpkgs.legacyPackages.x86_64-linux.callPackage redumper/bin.nix {};
-      redumper-git = nixpkgs.legacyPackages.x86_64-linux.callPackage redumper/package.nix {};
+    # Redumper
+      redumper = self.packages.x86_64-linux.redumper-release;
+      redumper-release = pkgs.callPackage redumper/release.nix {};
+      redumper-git = pkgs.callPackage redumper/package.nix {};
+
+    # SabreTools
+      sabretools = self.packages.x86_64-linux.sabretools-release;
+      sabretools-release = pkgs.callPackage sabretools/package.nix {};
+      sabretools-git = pkgs.callPackage sabretools/git.nix {};
+
+    # UnshieldSharp
+      unshieldsharp = self.packages.x86_64-linux.unshieldsharp-release;
+      unshieldsharp-release = pkgs.callPackage unshieldsharp/release.nix {};
+      unshieldsharp-git = pkgs.callPackage unshieldsharp/git.nix {};
+
     };
   };
 }

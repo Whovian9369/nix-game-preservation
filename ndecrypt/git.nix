@@ -7,18 +7,18 @@
 
 buildDotnetModule {
   pname = "ndecrypt";
-  version = "0.3.2";
+  version = "0.3.1";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "NDecrypt";
-    rev = "d7a51c77986fbb3973db82b1a388d4f02e66fb26";
-    hash = "sha256-ZcPGhRDh2mX6dVyN0CyT7MEGvj0ZY6FooNclu2fEmmM=";
+    rev = "abf0843d22091f03303b563ed0d2ed894138a2c1";
+    hash = "sha256-1WY019Th3RVONfI6WegozGQq2/Zi2b1gMLBtcfRSqIw=";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_9_0;
   dotnet-runtime = dotnetCorePackages.runtime_9_0;
-  nugetDeps = ./deps-git.nix;
+  nugetDeps = ./deps-git.json;
   projectFile = "NDecrypt/NDecrypt.csproj";
   selfContainedBuild = false;
   dotnetBuildFlags = [ "--framework net9.0" ];

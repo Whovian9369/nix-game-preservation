@@ -9,17 +9,35 @@ Notes:
 ## Included projects:
 - [Redumper](https://github.com/superg/redumper) - "Low level CD dumper utility"
   - `redumper`
-    - Defaults to `redumper-bin`.
-  - `redumper-bin`
+    - Defaults to `redumper-release`.
+  - `redumper-release`
     - Latest commit build, as built by GitHub Actions, and patched locally for use on Nix.
   - `redumper-git`
     - Using latest commit.
 
 - [NDecrypt](https://github.com/SabreTools/NDecrypt) - "Cartridge encrypt/decrypt"
+  - `ndecrypt`
+    - Defaults to `ndecrypt-release`
   - `ndecrypt-git`
     - Using latest commit.
   - `ndecrypt-release`
     - Using release commit.
+
+  - [SabreTools](https://github.com/SabreTools/SabreTools) - "DAT management tool with advanced editing and sorting features"
+  - `sabretools`
+    - Defaults to `sabretools-release`
+  - `sabretools-release`
+    - Using release commit.
+  - `sabretools-git`
+    - Using latest commit.
+
+  - [UnshieldSharp](https://github.com/mnadareski/UnshieldSharp) - "Port of Unshield to C#"
+  - `unshieldsharp`
+    - Defaults to `unshieldsharp-release`
+  - `unshieldsharp-release`
+    - Using release commit.
+  - `unshieldsharp-git`
+    - Using latest commit.
 
 ### DiscImageCreator
 - [DiscImageCreator](https://github.com/saramibreak/DiscImageCreator) - "disc (CD, GD, DVD, HD-DVD, BD, GC/Wii, XBOX, XBOX 360) and disk (Floppy, MO, USB etc) image creation tool"

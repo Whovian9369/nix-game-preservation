@@ -18,7 +18,7 @@ buildDotnetModule {
 
   dotnet-sdk = dotnetCorePackages.sdk_9_0;
   dotnet-runtime = dotnetCorePackages.runtime_9_0;
-  nugetDeps = ./deps-release.nix;
+  nugetDeps = ./deps-release.json;
   projectFile = "NDecrypt/NDecrypt.csproj";
   selfContainedBuild = false;
   dotnetBuildFlags = [ "--framework net9.0" ];
