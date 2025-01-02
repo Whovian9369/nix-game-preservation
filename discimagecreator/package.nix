@@ -4,9 +4,10 @@
   fetchFromGitHub,
   meson,
   ninja,
+  dos2unix
 }:
 
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   pname = "discimagecreator";
   version = "20250101";
 
@@ -24,9 +25,19 @@ stdenv.mkDerivation {
 
   postPatch = ''
     mkdir -p $out/share/DiscImageCreator
-    cp LICENSE README.md Release_ANSI/C2ErrorProtect.txt Release_ANSI/ReadErrorProtect.txt $out/share/DiscImageCreator/
-    cp "Release_ANSI/DVDRawBruteforce - Drive Sheet - Sheet1.tsv" $out/share/DiscImageCreator/
+    ${dos2unix}/bin/dos2unix Release_ANSI/default.dat \
+      Release_ANSI/driveOffset.txt
+    cp LICENSE README.md Release_ANSI/C2ErrorProtect.txt \
+      Release_ANSI/ReadErrorProtect.txt Release_ANSI/default.dat \
+      Release_ANSI/driveOffset.txt \
+      "Release_ANSI/DVDRawBruteforce - Drive Sheet - Sheet1.tsv" \
+    $out/share/DiscImageCreator/
     cp -r Release_ANSI/Doc $out/share/DiscImageCreator/
+    
+    # Replace date string with something more reproducible.
+    substituteInPlace meson.build \
+       --replace-warn "'date', '+%Y%m%d'" "'echo', '${version}'" \
+       --replace-warn "'date', '+%H%M%S'" "'echo', '999999'"
   '';
 
   meta = {
