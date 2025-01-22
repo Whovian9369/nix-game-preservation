@@ -1,4 +1,6 @@
 /result*
-# Output build symlink
+  # Output build symlink
+/fetch-deps*
+  # Symlinks for Dotnet dependency file generation
 *.log
-# Lot files for debugging
+  # Log files for debugging
