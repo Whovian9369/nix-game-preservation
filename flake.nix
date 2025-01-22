@@ -34,6 +34,7 @@
         };
       };
       dic-eccedc = pkgs.callPackage discimagecreator/eccedc.nix {};
+      dic-eccedc-git = pkgs.callPackage discimagecreator/eccedc-git.nix {};
       dic-unscrambler = pkgs.callPackage discimagecreator/unscrambler.nix {};
       dic-dvdauth = pkgs.callPackage discimagecreator/dvdauth.nix {};
 
