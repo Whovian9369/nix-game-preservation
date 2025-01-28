@@ -6,12 +6,12 @@
 
 stdenvNoCC.mkDerivation rec {
   name = "redumper-bin-v${version}";
-  version = "438";
-  date = "2024.11.03";
+  version = "452";
+  date = "2025.01.21";
 
   src = fetchzip {
     url = "https://github.com/superg/redumper/releases/download/build_${version}/redumper-${date}_build${version}-Linux.zip";
-    hash = "sha256-ymyJdFYUWKEuUWtuNHAHHwEKsNyhMveGLHNz7lO9WUo=";
+    hash = "sha256-ZfrgqVE4SvuAf5u762DV8JwgLUCXoQBPGd9CXBsV/0I=";
   };
 
   installPhase = ''
