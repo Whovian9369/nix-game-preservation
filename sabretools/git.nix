@@ -11,8 +11,8 @@ buildDotnetModule {
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "SabreTools";
-    rev = "80d41d72d1443bcbdce0a9228754602b0cb0348d";
-    hash = "sha256-J9JIis1P50AbHQWX5a6ehM1vP1Y/LrOPNBVDLX7xRFk=";
+    rev = "845babdff596a33900078754e82100de8a25ba8d";
+    hash = "sha256-ggL1MV4OraSlS5trQiYz9D2cMgNVIZFnMlbZNJ4OzeA=";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_9_0;
