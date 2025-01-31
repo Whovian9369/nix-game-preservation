@@ -1,9 +1,9 @@
 {
   lib,
-  llvmPackages_18,
   fetchFromGitHub,
   cmake,
   ninja,
+  llvmPackages,
   build_type ? "Release",
   # Typical `build_type` values include `Debug`, `Release`, `RelWithDebInfo`
   # and `MinSizeRel`
@@ -11,41 +11,46 @@
   # by default here.
 }:
 
-llvmPackages_18.libcxxStdenv.mkDerivation rec {
+llvmPackages.libcxxStdenv.mkDerivation /* rec */ {
   pname = "redumper";
-  version = "build_438";
+  version = "build_458";
 
   src = fetchFromGitHub {
     owner = "superg";
     repo = "redumper";
-    rev = version;
-    hash = "sha256-Ft+fxrKt7Yue+JT6PydWIzwbKGBX/VzLjjsADD7mqy0=";
+    rev = "1e3f4c28395aaa744502ad9566eb23b8b92e60a0";
+    hash = "sha256-qpHSzFlSy+MRVnOUOS4SyKfx3y5KVvD5eqUDzNoeyxo=";
   };
 
   nativeBuildInputs = [
     cmake
     ninja
-    (llvmPackages_18.clang-tools.override { enableLibcxx = true; })
+    llvmPackages.clang-tools
   ];
 
-  env.gh_run_version = lib.removePrefix "build_" version;
+  patches = [
+    ./remove_compiler_warnings.diff
+      # Remove warning:
+      # clang++: warning: argument unused during compilation: '-stdlib=libc++' [-Wunused-command-line-argument]
+    ./build_timestamp.diff
+      # Change timestamp variables to be "CACHE" ones that can be overridden.
+      # This lets us force various date values to match `src.rev` date.
+  ];
 
+  # Originally based on
+  # https://github.com/superg/redumper/blob/main/.github/workflows/cmake.yml
   cmakeFlags = [
-    "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON"
-    "-DREDUMPER_VERSION_BUILD=${env.gh_run_version}"
-    "-DREDUMPER_CLANG_LINK_OPTIONS="
-  ];
+    (lib.cmakeBool "CMAKE_BUILD_WITH_INSTALL_RPATH" true)
+    (lib.cmakeFeature "REDUMPER_CLANG_LINK_OPTIONS" "")
+      # overrides the '-static' default
 
-  postPatch = ''
-    substituteInPlace CMakeLists.txt \
-      --replace-fail '"-static"' "" \
-      --replace-fail '(-stdlib=libc++' "(" \
-      --replace-fail \
-        'add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-stdlib=libc++>)' ""
-  '';
-    # Use of "-static" appears to break build.
-    # Use of "-stdlib=libc++" appears to be unused according to logs.
-    # Use of "-stdlib=libc++" appears to be unused according to logs.
+    # Fix version datestamp to date of `src.rev` commit.
+    # See notes for build_timestamp.diff patch
+    (lib.cmakeFeature "REDUMPER_VERSION_MAJOR" "2025") # Year
+    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "01") # Month
+    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "21") # Day
+    (lib.cmakeFeature "REDUMPER_VERSION_BUILD" "NixOS")
+  ];
 
   meta = {
     description = "Low level CD dumper utility";
@@ -53,6 +58,6 @@ llvmPackages_18.libcxxStdenv.mkDerivation rec {
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [ ];
     mainProgram = "redumper";
-    platforms = lib.platforms.all;
+    platforms = lib.platforms.linux;
   };
 }
