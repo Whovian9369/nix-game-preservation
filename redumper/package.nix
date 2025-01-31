@@ -48,7 +48,7 @@ llvmPackages.libcxxStdenv.mkDerivation /* rec */ {
     # See notes for build_timestamp.diff patch
     (lib.cmakeFeature "REDUMPER_VERSION_MAJOR" "2025") # Year
     (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "01") # Month
-    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "21") # Day
+    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "31") # Day
     (lib.cmakeFeature "REDUMPER_VERSION_BUILD" "NixOS")
   ];
 
