@@ -54,7 +54,7 @@ Notes:
 
 - [DVDAuth](https://github.com/saramibreak/DVDAuth) (by saramibreak) - "This is CSS or CPPM or CPRM authentication tool"
   - `dic-dvdauth`
-    - Latest release commit, which also happens to be the latest repository commit.
+    - Latest release commit.
 
 - [EccEdc](https://github.com/saramibreak/EccEdc) (by saramibreak) - "checks or fix user data of the 2048 byte per sector of CD by using ecc/edc"
   - `dic-eccedc`
@@ -62,4 +62,4 @@ Notes:
 
 - [Unscrambler](https://github.com/saramibreak/unscrambler) (by saramibreak) - "unscramble not standard IVs scrambled DVDs thru bruteforce, intended for Gamecube/WII Optical Disks."
   - `dic-unscrambler`
-    - Latest release commit, which also happens to be the latest repository commit.
+    - Latest release commit.
