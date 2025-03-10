@@ -400,6 +400,11 @@
     "hash": "sha256-tCOMMhRtdW16NWi7fCkqXWls5Tb108LawDjWAqBIaLg="
   },
   {
+    "pname": "SabreTools.Hashing",
+    "version": "1.4.2",
+    "hash": "sha256-4MNKw33Bebex8XancQF2qYUfECTdfPDaVN4d81CWR60="
+  },
+  {
     "pname": "SabreTools.IO",
     "version": "1.6.2",
     "hash": "sha256-RrSr9yGfqUGIu5iG0AAv0MwZ2/+9a/2XNYaPOPFsNzM="
@@ -416,8 +421,8 @@
   },
   {
     "pname": "SabreTools.Serialization",
-    "version": "1.8.5",
-    "hash": "sha256-TEkeAwPgSBruinNQFyMkmV8D2jSCUJ8NQ2ca4B18/zA="
+    "version": "1.8.6",
+    "hash": "sha256-zJRpTturGPiFSm05XMxOEg5G1gdT05VhuLgNyikXLBM="
   },
   {
     "pname": "System.Buffers",

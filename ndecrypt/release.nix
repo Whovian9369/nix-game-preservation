@@ -5,14 +5,14 @@
   fetchFromGitHub
 }:
 
-buildDotnetModule {
+buildDotnetModule rec {
   pname = "ndecrypt";
   version = "0.3.1";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "NDecrypt";
-    rev = "6a094b2dd8b8425550b013f096ea56c00e26438c";
+    tag = "${version}";
     hash = "sha256-hXdtG4XRfL9GR+5uRptkKS+aAae3KbZDXBVcp82aY8A=";
   };
 
