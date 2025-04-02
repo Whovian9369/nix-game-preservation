@@ -40,7 +40,7 @@
 
     # NDecrypt
       ndecrypt = self.packages.x86_64-linux.ndecrypt-release;
-      ndecrypt-release = pkgs.callPackage ndecrypt/release.nix {};
+      ndecrypt-release = pkgs.callPackage ndecrypt/bin.nix {};
       ndecrypt-git = pkgs.callPackage ndecrypt/git.nix {};
 
     # Redumper
