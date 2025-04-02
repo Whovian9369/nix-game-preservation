@@ -3,7 +3,7 @@
   fetchFromGitHub,
   cmake,
   ninja,
-  llvmPackages,
+  llvmPackages_18,
   build_type ? "Release",
   # Typical `build_type` values include `Debug`, `Release`, `RelWithDebInfo`
   # and `MinSizeRel`
@@ -11,21 +11,21 @@
   # by default here.
 }:
 
-llvmPackages.libcxxStdenv.mkDerivation {
+llvmPackages_18.libcxxStdenv.mkDerivation {
   pname = "redumper";
-  version = "build_503";
+  version = "build_537";
 
   src = fetchFromGitHub {
     owner = "superg";
     repo = "redumper";
-    rev = "bdedce6292307bb794fb99dd21e68d40eba392f1";
-    hash = "sha256-V5W2Y2cp5pwaSALePoU+m7+jyTvVaTVtGYP/Vtn/u5E=";
+    rev = "249cbdd073909476fbdacb815c391d9192ce15e4";
+    hash = "sha256-Iv0KXrXqOjGikXjLQ/0IeDGID4FdbGvpLPpjUVrNgB4=";
   };
 
   nativeBuildInputs = [
     cmake
     ninja
-    llvmPackages.clang-tools
+    llvmPackages_18.clang-tools
   ];
 
   cmakeFlags = [
@@ -34,8 +34,8 @@ llvmPackages.libcxxStdenv.mkDerivation {
     # Fix version datestamp to date of `src.rev` commit.
     # It would be nice if I was able to automate this.
     (lib.cmakeFeature "REDUMPER_VERSION_MAJOR" "2025") # Year
-    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "02") # Month
-    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "09") # Day
+    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "03") # Month
+    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "29") # Day
     (lib.cmakeFeature "REDUMPER_VERSION_BUILD" "NixOS")
   ];
 
