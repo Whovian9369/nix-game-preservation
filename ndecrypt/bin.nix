@@ -13,12 +13,12 @@
 
 stdenvNoCC.mkDerivation rec {
   name = "ndecrypt-bin";
-  version = "0.2.5";
+  version = "0.3.2";
 
   src = fetchzip {
-    url = "https://github.com/SabreTools/NDecrypt/releases/download/${version}/NDecrypt.${version}_net6.0_linux-x64.zip";
-    hash = "sha256-4yPWLmDnvSkyJGfxwTX2KKsUErm8T+HQRTqeFrrHmYE=";
-    stripRoot = false;
+    url = "https://github.com/SabreTools/NDecrypt/releases/download/${version}/NDecrypt_${version}_net9.0_linux-x64_release.zip";
+    hash = "sha256-YshkZc0l9gCdG6fHOG/e0Iiq1mv3v+PJWnbEf9+43jY=";
+    # stripRoot = false;
   };
 
   buildInputs = [
