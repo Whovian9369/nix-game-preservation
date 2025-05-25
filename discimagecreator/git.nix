@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation rec {
   pname = "discimagecreator";
-  version = "20250101";
+  version = "20250501";
 
   src = fetchFromGitHub {
     owner = "saramibreak";
     repo = "DiscImageCreator";
-    rev = "5126ba5ae028fd589aaeaf56c7878d4e295e81c1";
-    hash = "sha256-D4hRsroYCV6JKODMNGDw5FCfIQVtw7KmijopOCqhroI=";
+    rev = "82858eed68a8188421d00e87fe97eb8ed6748a3e";
+    hash = "sha256-oighzBc37AHcmg4uNq/42PEAWUb9/8UUnCGIKsEYFdU=";
   };
 
   nativeBuildInputs = [
