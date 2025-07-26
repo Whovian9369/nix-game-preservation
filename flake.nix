@@ -17,7 +17,8 @@
       discimagecreator = self.packages.x86_64-linux.dic-release-full;
       dic-release = pkgs.callPackage discimagecreator/package.nix {};
       dic-release-full = pkgs.symlinkJoin {
-        name = "DiscImageCreator-Full";
+        pname = "DiscImageCreator-full";
+        version = "${self.packages.x86_64-linux.dic-release.version}";
         paths = [ self.packages.x86_64-linux.dic-release self.packages.x86_64-linux.dic-eccedc self.packages.x86_64-linux.dic-unscrambler self.packages.x86_64-linux.dic-dvdauth ];
         meta = {
           description = "DiscImageCreator + EccEdc + Unscrambler + DVDAuth";
@@ -26,7 +27,8 @@
       };
       dic-git = pkgs.callPackage discimagecreator/git.nix {};
       dic-git-full = pkgs.symlinkJoin {
-        name = "DiscImageCreator-Full";
+        pname = "DiscImageCreator-full";
+        version = "${self.packages.x86_64-linux.dic-git.version}";
         paths = [ self.packages.x86_64-linux.dic-git self.packages.x86_64-linux.dic-eccedc self.packages.x86_64-linux.dic-unscrambler self.packages.x86_64-linux.dic-dvdauth ];
         meta = {
           description = "DiscImageCreator + EccEdc + Unscrambler + DVDAuth";

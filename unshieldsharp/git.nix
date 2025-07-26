@@ -12,8 +12,8 @@ buildDotnetModule {
   src = fetchFromGitHub {
     owner = "mnadareski";
     repo = "UnshieldSharp";
-    rev = "1980d7666849e6d86f12ae01330a6690ed76bb28";
-    hash = "sha256-L3qt/kw+vJV6MWZ0B9AK3GUK96+aR5FrUcJNQXbr0LA=";
+    rev = "6aa463f11c67e676bf75e04565ba97dc7e165dc9";
+    hash = "sha256-MY4noY8t+63W0mURvz9Yh7xh6YF7+doh0pTaCjchuNY=";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_9_0;

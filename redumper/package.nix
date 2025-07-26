@@ -13,13 +13,13 @@
 
 llvmPackages_18.libcxxStdenv.mkDerivation {
   pname = "redumper";
-  version = "build_563";
+  version = "build_631";
 
   src = fetchFromGitHub {
     owner = "superg";
     repo = "redumper";
-    rev = "1f0a58ba57f73e504206c503508a077e4f1f7280";
-    hash = "sha256-RMlEHTnPzY9yj6xq/2MEJJl2tFyCX8rMskWxLGpiPS4=";
+    rev = "c4b299f5a0f4586a0b433ff039292b34838b0ac5";
+    hash = "sha256-YldRA0C2fDH7QHtzDjwXWz7EgJb9Q2ePaKeD7Zr7/yo=";
   };
 
   nativeBuildInputs = [
@@ -34,8 +34,8 @@ llvmPackages_18.libcxxStdenv.mkDerivation {
     # Fix version datestamp to date of `src.rev` commit.
     # It would be nice if I was able to automate this.
     (lib.cmakeFeature "REDUMPER_VERSION_MAJOR" "2025") # Year
-    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "03") # Month
-    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "29") # Day
+    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "07") # Month
+    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "13") # Day
     (lib.cmakeFeature "REDUMPER_VERSION_BUILD" "NixOS")
   ];
 
