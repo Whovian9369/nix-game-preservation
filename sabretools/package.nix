@@ -20,8 +20,8 @@ buildDotnetModule rec {
   dotnet-runtime = dotnetCorePackages.runtime_9_0;
   nugetDeps = ./deps-release.json;
   projectFile = "SabreTools/SabreTools.csproj";
-  dotnetBuildFlags = [ "--framework net5.0" ];
-  dotnetInstallFlags = [ "--framework net5.0" ];
+  dotnetBuildFlags = [ "--framework net9.0" ];
+  dotnetInstallFlags = [ "--framework net9.0" ];
 
   executables = [ "SabreTools" ];
 
