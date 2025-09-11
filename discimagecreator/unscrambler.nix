@@ -22,7 +22,7 @@ stdenv.mkDerivation {
   '';
 
   meta = {
-    description = "Unscramble not standard IVs scrambled DVDs thru  bruteforce, intended for Gamecube/WII Optical Disks";
+    description = "Unscramble not standard IVs scrambled DVDs thru bruteforce, intended for Gamecube/WII Optical Disks";
     homepage = "https://github.com/saramibreak/unscrambler";
     license = lib.licenses.gpl2Only;
     maintainers = with lib.maintainers; [ ];

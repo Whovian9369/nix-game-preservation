@@ -10,11 +10,6 @@ stdenv.mkDerivation rec {
 
   sourceRoot = "${src.name}/EccEdc";
 
-  preBuild = ''
-    substituteInPlace _external/ecm.cpp --replace-fail '#include "ecm.h"' \
-      $'#include "ecm.h"\n#include <cstdint>'
-  '';
-
   src = fetchFromGitHub {
     owner = "saramibreak";
     repo = "EccEdc";
@@ -23,6 +18,11 @@ stdenv.mkDerivation rec {
   };
 
   env.PREFIX="$(out)";
+
+  preBuild = ''
+    substituteInPlace _external/ecm.cpp --replace-fail '#include "ecm.h"' \
+      $'#include "ecm.h"\n#include <cstdint>'
+  '';
 
   preInstall = ''
     mkdir -p $out/bin
