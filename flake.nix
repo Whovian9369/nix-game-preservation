@@ -61,6 +61,11 @@
       unshieldsharp-release = pkgs.callPackage unshieldsharp/release.nix {};
       unshieldsharp-git = pkgs.callPackage unshieldsharp/git.nix {};
 
+    # SabreTools.Serialization
+    # Specifically for "ExtractionTool" and "InfoPrint"
+      serialization = self.packages.x86_64-linux.serialization-release;
+      serialization-release = pkgs.callPackage serialization/release.nix {};
+      serialization-git = pkgs.callPackage serialization/git.nix {};
     };
   };
 }
