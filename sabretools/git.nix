@@ -23,12 +23,18 @@ buildDotnetModule {
   dotnetBuildFlags = [ "--framework net9.0" ];
   dotnetInstallFlags = [ "--framework net9.0" ];
 
-  meta = with lib; {
+  executables = [ "SabreTools" ];
+
+  postFixup = ''
+    mv $out/bin/SabreTools $out/bin/sabretools
+  '';
+
+  meta = {
     description = "DAT management tool with advanced editing and sorting features";
     homepage = "https://github.com/SabreTools/SabreTools";
-    license = licenses.mit;
-    maintainers = with maintainers; [ ];
-    mainProgram = "SabreTools";
-    platforms = platforms.all;
+    license = lib.licenses.mit;
+    maintainers = with lib.maintainers; [ ];
+    mainProgram = "sabretools";
+    platforms = lib.platforms.all;
   };
 }
