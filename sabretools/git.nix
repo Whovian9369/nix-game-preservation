@@ -7,7 +7,7 @@
 
 buildDotnetModule {
   pname = "sabretools";
-  version = "1.2.0";
+  version = "1.2.1-unstable-2025-07-09";
 
   src = fetchFromGitHub {
     owner = "SabreTools";

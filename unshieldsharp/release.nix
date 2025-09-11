@@ -5,29 +5,29 @@
   fetchFromGitHub
 }:
 
-buildDotnetModule {
+buildDotnetModule rec {
   pname = "unshieldsharp";
-  version = "1.9.4";
+  version = "v2.0.0";
 
   src = fetchFromGitHub {
     owner = "mnadareski";
     repo = "UnshieldSharp";
-    rev = "184222c19b10d890e8125d34ae0d45220031fdfd";
-    hash = "sha256-smwrWcUf/TWw6pXSh1ylq+vf+xtZyrnXJsrJTGxoeQ4=";
+    tag = "v${version}";
+    hash = "sha256-5SR1FmAo+OCPeTm58NdYOexj4/+rdszb/mQ+5ijkbQg=";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_9_0;
   dotnet-runtime = dotnetCorePackages.runtime_9_0;
   nugetDeps = ./deps-release.json;
-  projectFile = "Test/Test.csproj";
+  projectFile = "UnshieldSharp/UnshieldSharp.csproj";
   selfContainedBuild = false;
   dotnetBuildFlags = [ "--framework net9.0" ];
   dotnetInstallFlags = [ "--framework net9.0" ];
 
-  executables = [ "Test" ];
+  executables = [ "UnshieldSharp" ];
 
   preFixup = ''
-    mv $out/bin/Test $out/bin/unshieldsharp
+    mv $out/bin/UnshieldSharp $out/bin/unshieldsharp
   '';
 
   meta = {
