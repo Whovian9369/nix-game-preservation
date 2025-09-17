@@ -18,6 +18,8 @@ Notes:
 - [NDecrypt](https://github.com/SabreTools/NDecrypt) - "Cartridge encrypt/decrypt"
   - `ndecrypt`
     - Defaults to `ndecrypt-release`
+  - `ndecrypt-bin`
+    - Latest release build, as built by GitHub Actions, and patched locally for use on Nix.
   - `ndecrypt-git`
     - Using latest commit.
   - `ndecrypt-release`
@@ -38,6 +40,20 @@ Notes:
     - Using release commit.
   - `unshieldsharp-git`
     - Using latest commit.
+
+  - [SabreTools.Serialization](https://github.com/SabreTools/SabreTools.Serialization) - Libraries that includes two useful binaries
+    - `serialization`
+      - Defaults to `serialization-release`
+    - `serialization-release`
+      - Using release tag.
+    - `serialization-git`
+      - Using latest commit.
+
+  - [BinaryObjectScanner](https://github.com/SabreTools/BinaryObjectScanner) - "C# protection, packer, and archive scanning library"
+    - `binaryobjectscanner`
+      - Defaults to `binaryobjectscanner-git`
+    - `binaryobjectscanner-git`
+      - Using latest commit.
 
 ### DiscImageCreator
 - [DiscImageCreator](https://github.com/saramibreak/DiscImageCreator) - "disc (CD, GD, DVD, HD-DVD, BD, GC/Wii, XBOX, XBOX 360) and disk (Floppy, MO, USB etc) image creation tool"

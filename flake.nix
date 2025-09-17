@@ -66,6 +66,12 @@
       serialization = self.packages.x86_64-linux.serialization-release;
       serialization-release = pkgs.callPackage serialization/release.nix {};
       serialization-git = pkgs.callPackage serialization/git.nix {};
+
+    # BinaryObjectScanner
+    # Only doing a "-git" package due to the latest Release being packaged as
+    # pkgs.binary-object-scanner
+      binaryobjectscanner = self.packages.x86_64-linux.binaryobjectscanner-git;
+      binaryobjectscanner-git = pkgs.callPackage binaryobjectscanner/git.nix {};
     };
   };
 }
