@@ -7,7 +7,7 @@
 
 buildDotnetModule {
   pname = "unshieldsharp";
-  version = "v2.0.0-unstable-2025-09-06";
+  version = "2.0.0-unstable-2025-09-06";
 
   src = fetchFromGitHub {
     owner = "mnadareski";

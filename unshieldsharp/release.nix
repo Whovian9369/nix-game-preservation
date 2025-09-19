@@ -7,12 +7,12 @@
 
 buildDotnetModule rec {
   pname = "unshieldsharp";
-  version = "v2.0.0";
+  version = "2.0.0";
 
   src = fetchFromGitHub {
     owner = "mnadareski";
     repo = "UnshieldSharp";
-    tag = "v${version}";
+    tag = "${version}";
     hash = "sha256-5SR1FmAo+OCPeTm58NdYOexj4/+rdszb/mQ+5ijkbQg=";
   };
 
