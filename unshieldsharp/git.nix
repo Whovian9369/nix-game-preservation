@@ -7,13 +7,13 @@
 
 buildDotnetModule {
   pname = "unshieldsharp";
-  version = "2.0.0-unstable-2025-09-06";
+  version = "2.0.0-unstable-2025-09-29";
 
   src = fetchFromGitHub {
     owner = "mnadareski";
     repo = "UnshieldSharp";
-    rev = "132cb2c18fb50d8e1ae9273768c5e1d3a5a91961";
-    hash = "sha256-5SR1FmAo+OCPeTm58NdYOexj4/+rdszb/mQ+5ijkbQg=";
+    rev = "ca61979ca94140b29febc7cc669b065627a0dfdf";
+    hash = "sha256-SA/qoZbI3ce4nFNDACDK4aIjOwfQ79QPYEQXqeOX0Pg=";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_9_0;

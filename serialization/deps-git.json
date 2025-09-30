@@ -396,13 +396,8 @@
   },
   {
     "pname": "Newtonsoft.Json",
-    "version": "13.0.3",
-    "hash": "sha256-hy/BieY4qxBWVVsDqqOPaLy1QobiIapkbrESm6v2PHc="
-  },
-  {
-    "pname": "SabreTools.ASN1",
-    "version": "1.6.2",
-    "hash": "sha256-KJlLe00m+ZRj+qcLxSw5znBVtyPQM5lD/pknoJtsEH0="
+    "version": "13.0.4",
+    "hash": "sha256-8JCB1FdAW681qXP6DFDWvycu1oPyVoxaYgpJ2pUvZSk="
   },
   {
     "pname": "SabreTools.Hashing",
@@ -411,18 +406,8 @@
   },
   {
     "pname": "SabreTools.IO",
-    "version": "1.7.2",
-    "hash": "sha256-HwtRZYtQOGP00FntPDjfAufBvcoLXB97sjkLdZZU6bw="
-  },
-  {
-    "pname": "SabreTools.Matching",
-    "version": "1.6.0",
-    "hash": "sha256-UniDR0cRi+8SCNw2c4MKaZ1qekGPJ8m30yKQe5+MYwg="
-  },
-  {
-    "pname": "SabreTools.Models",
-    "version": "1.7.1",
-    "hash": "sha256-jzAehtFnocNdC6nZ+lkQIxmXQZSj+GB0rZKLyc8pDd4="
+    "version": "1.7.5",
+    "hash": "sha256-daCSpFyI0tgJM1HaCFOqBvxRX+JJ+jGlRx0Q1ufD0sA="
   },
   {
     "pname": "SharpCompress",
@@ -486,8 +471,8 @@
   },
   {
     "pname": "System.Text.Encoding.CodePages",
-    "version": "9.0.8",
-    "hash": "sha256-K+hJ5tAj3aRFhQumNmQ4TqyoVgWaChcA8LkWjKpUs90="
+    "version": "9.0.9",
+    "hash": "sha256-CUQYq55ZVTPSdiI7bXm8TNgFjusdiBfT0JlUCOu2SUY="
   },
   {
     "pname": "System.Threading.Tasks.Extensions",

@@ -386,18 +386,8 @@
   },
   {
     "pname": "Newtonsoft.Json",
-    "version": "13.0.3",
-    "hash": "sha256-hy/BieY4qxBWVVsDqqOPaLy1QobiIapkbrESm6v2PHc="
-  },
-  {
-    "pname": "SabreTools.ASN1",
-    "version": "1.6.2",
-    "hash": "sha256-KJlLe00m+ZRj+qcLxSw5znBVtyPQM5lD/pknoJtsEH0="
-  },
-  {
-    "pname": "SabreTools.Compression",
-    "version": "0.6.3",
-    "hash": "sha256-ZgoJzy7QpIl5Qqlk8O4DYXpV6kIaf04zStaV8SvzJNE="
+    "version": "13.0.4",
+    "hash": "sha256-8JCB1FdAW681qXP6DFDWvycu1oPyVoxaYgpJ2pUvZSk="
   },
   {
     "pname": "SabreTools.Hashing",
@@ -406,23 +396,13 @@
   },
   {
     "pname": "SabreTools.IO",
-    "version": "1.7.2",
-    "hash": "sha256-HwtRZYtQOGP00FntPDjfAufBvcoLXB97sjkLdZZU6bw="
-  },
-  {
-    "pname": "SabreTools.Matching",
-    "version": "1.6.0",
-    "hash": "sha256-UniDR0cRi+8SCNw2c4MKaZ1qekGPJ8m30yKQe5+MYwg="
-  },
-  {
-    "pname": "SabreTools.Models",
-    "version": "1.7.1",
-    "hash": "sha256-jzAehtFnocNdC6nZ+lkQIxmXQZSj+GB0rZKLyc8pDd4="
+    "version": "1.7.5",
+    "hash": "sha256-daCSpFyI0tgJM1HaCFOqBvxRX+JJ+jGlRx0Q1ufD0sA="
   },
   {
     "pname": "SabreTools.Serialization",
-    "version": "1.9.1",
-    "hash": "sha256-jsDczrxg8c4a8thEBWH9ZJu84n6QYj+cYq7NNE1gWUo="
+    "version": "2.0.0",
+    "hash": "sha256-SnpKY5+VO7hjTSJMaFTQ/77at3Qt9K/jPp+BiqaGvnU="
   },
   {
     "pname": "SharpCompress",

@@ -7,13 +7,13 @@
 
 buildDotnetModule {
   pname = "sabretools";
-  version = "1.2.1-unstable-2025-07-19";
+  version = "1.2.1-unstable-2025-09-29";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "SabreTools";
-    rev = "d57fa4290a8255cd78d50dabda7a010061cde28d";
-    hash = "sha256-fLELqUgu1hgxHeNjN5bANaCUtNeIfp4HaBXIoq1N5GE=";
+    rev = "998ccd1ebaf0e3a1c9bf3b3175557f464dfbf5d8";
+    hash = "sha256-l0ruO4gg+NAQifu/7lNE98a1ZtSrtW7SlUDH4Ka2cC4=";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_9_0;
