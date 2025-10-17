@@ -14,7 +14,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "saramibreak";
     repo = "DiscImageCreator";
-    rev = "61399276efe9f0870aa4d98abb962aa366d878ab";
+    tag = version;
+    # rev = "61399276efe9f0870aa4d98abb962aa366d878ab";
     hash = "sha256-LPmgPpUefNKaUsHL4Vo4fQ0qHsqOqDc5lqc6vA5rV3c=";
   };
 

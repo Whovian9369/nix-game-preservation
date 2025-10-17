@@ -4,14 +4,15 @@
   fetchFromGitHub,
 }:
 
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   pname = "unscrambler";
   version = "0.5.5";
 
   src = fetchFromGitHub {
     owner = "saramibreak";
     repo = "unscrambler";
-    rev = "ffbf48a271e734c8fd34128d76d4c0b6c51f541f";
+    tag = version;
+    # rev = "ffbf48a271e734c8fd34128d76d4c0b6c51f541f";
     hash = "sha256-nwqJJi3aSbc8k5Vd1Tz/Du6yVw2MbHuusjoFtu3S/dc=";
   };
 

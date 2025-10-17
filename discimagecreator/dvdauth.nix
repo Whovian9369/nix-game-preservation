@@ -13,7 +13,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "saramibreak";
     repo = "DVDAuth";
-    rev = "708cf70429877d44619260feafa437d65b2994a1";
+    tag = "v${version}";
+    # rev = "708cf70429877d44619260feafa437d65b2994a1";
     hash = "sha256-KXSynLSUqAfwumkh0s0eHYQDeKelF6v0nisuDwOeIOI=";
   };
 

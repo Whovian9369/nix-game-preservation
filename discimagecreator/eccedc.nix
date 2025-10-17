@@ -13,7 +13,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "saramibreak";
     repo = "EccEdc";
-    rev = "4b744f511023f3ea093441faaf73cf79e218ec67";
+    tag = version;
+    # rev = "4b744f511023f3ea093441faaf73cf79e218ec67";
     hash = "sha256-rczhwzGLaZE6JiXhe/+zPkPlSO5P12Kf5DOU4HYfto0=";
   };
 
