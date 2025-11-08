@@ -426,8 +426,8 @@
   },
   {
     "pname": "SabreTools.IO",
-    "version": "1.7.6",
-    "hash": "sha256-AnvbeBwPPzmmk7OHo/MeUxLn2X5fsTD/itOLbHXLKC8="
+    "version": "1.8.0",
+    "hash": "sha256-0lRrLRiyN4UeI4hmu8fNOYZ0ewpGtMlRTHfR7cdKGlw="
   },
   {
     "pname": "System.Buffers",

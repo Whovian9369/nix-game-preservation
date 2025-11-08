@@ -10,6 +10,16 @@
     "hash": "sha256-WN+SuzMiv8UfT3r0r124wcbs/8OOixjpZkYwdTfeHvc="
   },
   {
+    "pname": "BouncyCastle.NetCore",
+    "version": "1.9.0",
+    "hash": "sha256-+hRbZ1he5YYPl3Ob+g7VJpP+3mKs3MDSqwgZTs8jkyQ="
+  },
+  {
+    "pname": "BouncyCastle.NetCore",
+    "version": "2.2.1",
+    "hash": "sha256-JZF/KqpEZWsHkqV/Ma9VH/eqT7Crz4ajh624PCRiCZQ="
+  },
+  {
     "pname": "GrindCore",
     "version": "0.5.3",
     "hash": "sha256-pDbRulIBE+i07l7V6VLjlFSH3fUAsjy7WAwRlaRG1Ng="
@@ -401,18 +411,18 @@
   },
   {
     "pname": "SabreTools.Hashing",
-    "version": "1.5.0",
-    "hash": "sha256-/ay13+s6iN1etg8Ykv5dSTBG0H7Cnh0737T4ew/tY3I="
+    "version": "1.5.1",
+    "hash": "sha256-ALxhOhdZJaerVLVBytIvB5gSI3sD76RQAAVBMsSle1Q="
   },
   {
     "pname": "SabreTools.IO",
-    "version": "1.7.5",
-    "hash": "sha256-daCSpFyI0tgJM1HaCFOqBvxRX+JJ+jGlRx0Q1ufD0sA="
+    "version": "1.8.0",
+    "hash": "sha256-0lRrLRiyN4UeI4hmu8fNOYZ0ewpGtMlRTHfR7cdKGlw="
   },
   {
     "pname": "SabreTools.Serialization",
-    "version": "2.0.1",
-    "hash": "sha256-P/Ntm0L9Guwd5eP+uZLSdDH6KO6D7/7cDbiT6OfRPUE="
+    "version": "2.1.0",
+    "hash": "sha256-FjNSoCILDm3LKoFnGRQU7yPpg/0x1zGxZVv9l+Y1ano="
   },
   {
     "pname": "System.Buffers",
