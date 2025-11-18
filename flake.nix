@@ -52,7 +52,7 @@
       redumper-git = pkgs.callPackage redumper/package.nix {};
 
     # SabreTools
-      sabretools = self.packages.x86_64-linux.sabretools-git;
+      sabretools = self.packages.x86_64-linux.sabretools-release;
       sabretools-release = pkgs.callPackage sabretools/package.nix {};
       sabretools-git = pkgs.callPackage sabretools/git.nix {};
 
