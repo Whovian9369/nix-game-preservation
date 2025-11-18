@@ -13,20 +13,26 @@
 
 llvmPackages_18.libcxxStdenv.mkDerivation {
   pname = "redumper";
-  version = "b658";
+  version = "b664";
 
   src = fetchFromGitHub {
     owner = "superg";
     repo = "redumper";
-    rev = "0a3c4171b2b0b72351db1939b8c7e4b9ba3ce290";
-    hash = "sha256-aG/+ti3ulp1SCISSMHn9oyVQ8vsgF9SinMdagn+vU/M=";
+    rev = "89c00e7aa6c3c68a98cf3c604d6a30d320aa4845";
+    hash = "sha256-fc3M6Pim+x/UwHOWZDp3yjLx7ajcNaIfYgamskwPDSA=";
   };
+
+  cmakeBuildType = "${build_type}";
 
   nativeBuildInputs = [
     cmake
     ninja
     llvmPackages_18.clang-tools
   ];
+
+  # For some reason, this lets the build pass.
+  # Thanks for finding this, github:@hughobrien !
+  env.NIX_CFLAGS_COMPILE = "-isystem ${llvmPackages_18.libcxx.dev}/include/c++/v1";
 
   cmakeFlags = [
     (lib.cmakeBool "CMAKE_BUILD_WITH_INSTALL_RPATH" true)

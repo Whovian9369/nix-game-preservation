@@ -7,19 +7,19 @@
 
 buildDotnetModule rec {
   pname = "sabretools-serialization";
-  version = "2.1.0";
+  version = "2.1.0-unstable-2025-11-17";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "SabreTools.Serialization";
-    rev = "281c18e21d6e16ca589cb39fa3cddb31e9a36b0e";
-    hash = "sha256-cZ7Y3sMgP4Pj2x3Byt2urvoZNKPbt+IFr6RnPVJKGGg=";
+    rev = "8658eaf4e02d60c13d5c491e91aaf563dd1a5016";
+    hash = "sha256-PPSUK8ug2XmxLWX/KtHdDtn/peiuUn+yf6mG6X6+70M=";
     fetchSubmodules = true;
     leaveDotGit = false;
   };
 
-  dotnet-sdk = dotnetCorePackages.sdk_9_0;
-  dotnet-runtime = dotnetCorePackages.runtime_9_0;
+  dotnet-sdk = dotnetCorePackages.sdk_10_0;
+  dotnet-runtime = dotnetCorePackages.runtime_10_0;
   nugetDeps = ./deps-git.json;
   projectFile = [ "ExtractionTool/ExtractionTool.csproj" "InfoPrint/InfoPrint.csproj" ];
   selfContainedBuild = false;
