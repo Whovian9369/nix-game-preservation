@@ -30,8 +30,9 @@ llvmPackages_18.libcxxStdenv.mkDerivation {
     llvmPackages_18.clang-tools
   ];
 
-  # For some reason, this lets the build pass.
+  # For some reason, this lets the build pass by finding the right headers.
   # Thanks for finding this, github:@hughobrien !
+  # See PR https://github.com/NixOS/nixpkgs/pull/463291
   env.NIX_CFLAGS_COMPILE = "-isystem ${llvmPackages_18.libcxx.dev}/include/c++/v1";
 
   cmakeFlags = [
