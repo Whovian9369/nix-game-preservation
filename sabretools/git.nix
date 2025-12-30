@@ -7,21 +7,21 @@
 
 buildDotnetModule {
   pname = "sabretools";
-  version = "1.2.1-unstable-2025-10-26";
+  version = "1.2.1-unstable-2025-11-25";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "SabreTools";
-    rev = "0e8d780946856ff2ea9bf7ec404d6a0bb70ecb4b";
-    hash = "sha256-HspATz0mMclFpOmJxRxkZfl1UnXgGNaBV9gDjyfwEeM=";
+    rev = "6205fc33fc277b3a1a648fd271a91f24c80145bb";
+    hash = "sha256-1J9+eJY8C2gW+irjUDN4Cmnag/U8i5PNvvtC5bKCLvU=";
   };
 
-  dotnet-sdk = dotnetCorePackages.sdk_9_0;
-  dotnet-runtime = dotnetCorePackages.runtime_9_0;
+  dotnet-sdk = dotnetCorePackages.sdk_10_0;
+  dotnet-runtime = dotnetCorePackages.runtime_10_0;
   nugetDeps = ./deps-git.json;
   projectFile = "SabreTools/SabreTools.csproj";
-  dotnetBuildFlags = [ "--framework net9.0" ];
-  dotnetInstallFlags = [ "--framework net9.0" ];
+  dotnetBuildFlags = [ "--framework net10.0" ];
+  dotnetInstallFlags = [ "--framework net10.0" ];
 
   executables = [ "SabreTools" ];
 

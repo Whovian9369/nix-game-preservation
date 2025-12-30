@@ -21,13 +21,18 @@
   },
   {
     "pname": "GrindCore",
-    "version": "0.5.3",
-    "hash": "sha256-pDbRulIBE+i07l7V6VLjlFSH3fUAsjy7WAwRlaRG1Ng="
+    "version": "0.6.4",
+    "hash": "sha256-U9QnVrKujiuTWuXrfro2CTCF4U4zQr2VPMr2UBjF/uI="
+  },
+  {
+    "pname": "GrindCore",
+    "version": "0.6.5",
+    "hash": "sha256-8NedfRSFd62YjRScI/2DREYsHqgtLZY35qn+w55jJA4="
   },
   {
     "pname": "GrindCore.SharpCompress",
-    "version": "0.40.4-alpha",
-    "hash": "sha256-d56UDLCyWWMtp2b7Um7V8hRvAVKLzcySgR8vRzeJxHc="
+    "version": "0.41.3",
+    "hash": "sha256-fyDUcaqDe6NvrF1VzWUQl7pUkmL5kZbZUZSEo2v88SQ="
   },
   {
     "pname": "Microsoft.AspNetCore.App.Ref",
@@ -171,8 +176,8 @@
   },
   {
     "pname": "Microsoft.Bcl.AsyncInterfaces",
-    "version": "9.0.9",
-    "hash": "sha256-JnY0XGuZ0VxGQQvCiidWBKATmUNIncPBrjpx25rWjL8="
+    "version": "10.0.0",
+    "hash": "sha256-lGPIkb/QO+CJNqWjU2U3e7wk5I6yykf7tdsS6W2O340="
   },
   {
     "pname": "Microsoft.NETCore.App.Host.linux-arm64",
@@ -470,6 +475,16 @@
     "hash": "sha256-in40hTjn65E1FpaRFon0nj1PY/i6tRdDK74Vm4sRBKI="
   },
   {
+    "pname": "Net30.LinqBridge",
+    "version": "1.6.0.1",
+    "hash": "sha256-Lwz0gK9sP8+qjmdHYEKCgWosL7VVKhL0z9Ke4T7FCk4="
+  },
+  {
+    "pname": "Net35.Actions",
+    "version": "1.4.0.1",
+    "hash": "sha256-UGy+fPY0xDXEyDbNaIpcvkIa8qNyku0E8LgqARyj5I4="
+  },
+  {
     "pname": "NetLegacySupport.Numerics",
     "version": "1.0.1",
     "hash": "sha256-GTHKSXn6d6l2bLL373ZSIr4Z40pQZ4Cli9JFCxXXY+w="
@@ -516,11 +531,6 @@
   },
   {
     "pname": "System.Memory",
-    "version": "4.5.5",
-    "hash": "sha256-EPQ9o1Kin7KzGI5O3U3PUQAZTItSbk9h/i4rViN3WiI="
-  },
-  {
-    "pname": "System.Memory",
     "version": "4.6.3",
     "hash": "sha256-JgeK63WMmumF6L+FH5cwJgYdpqXrSDcgTQwtIgTHKVU="
   },
@@ -528,16 +538,6 @@
     "pname": "System.Numerics.Vectors",
     "version": "4.6.1",
     "hash": "sha256-K8UAqG3LAvIDLW2Hf54tbp5KeQgOVyObQZhnnUAx8sc="
-  },
-  {
-    "pname": "System.Runtime.CompilerServices.Unsafe",
-    "version": "4.5.3",
-    "hash": "sha256-lnZMUqRO4RYRUeSO8HSJ9yBHqFHLVbmenwHWkIU20ak="
-  },
-  {
-    "pname": "System.Runtime.CompilerServices.Unsafe",
-    "version": "6.0.0",
-    "hash": "sha256-bEG1PnDp7uKYz/OgLOWs3RWwQSVYm+AnPwVmAmcgp2I="
   },
   {
     "pname": "System.Runtime.CompilerServices.Unsafe",
@@ -550,14 +550,9 @@
     "hash": "sha256-aBpQr9XjUWHg47IvESHZ7JUZoOsxLEFrR7m9+7/PqWQ="
   },
   {
-    "pname": "System.Text.Encoding.CodePages",
-    "version": "9.0.9",
-    "hash": "sha256-CUQYq55ZVTPSdiI7bXm8TNgFjusdiBfT0JlUCOu2SUY="
-  },
-  {
     "pname": "System.Threading.Tasks.Extensions",
-    "version": "4.5.4",
-    "hash": "sha256-owSpY8wHlsUXn5xrfYAiu847L6fAKethlvYx97Ri1ng="
+    "version": "4.6.3",
+    "hash": "sha256-GrySx1F6Ah6tfnnQt/PHC+dbzg+sfP47OOFX0yJF/xo="
   },
   {
     "pname": "System.ValueTuple",
