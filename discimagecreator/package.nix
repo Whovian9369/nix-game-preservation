@@ -4,24 +4,32 @@
   fetchFromGitHub,
   meson,
   ninja,
-  dos2unix
+  dos2unix,
+  libarchive,
+  pkg-config,
+  zlib,
+  openssl
 }:
 
 stdenv.mkDerivation rec {
   pname = "discimagecreator";
-  version = "20250901";
+  version = "20260101";
 
   src = fetchFromGitHub {
     owner = "saramibreak";
     repo = "DiscImageCreator";
     tag = version;
-    # rev = "61399276efe9f0870aa4d98abb962aa366d878ab";
-    hash = "sha256-LPmgPpUefNKaUsHL4Vo4fQ0qHsqOqDc5lqc6vA5rV3c=";
+    # rev = "4de6850de0db21aecf234fae9ab8c6e0cad80a9e";
+    hash = "sha256-DmwW0RVTyHxkaNsPcZbloxvtcPruqDpRn8Diai1whRc=";
   };
 
   nativeBuildInputs = [
     meson
     ninja
+    libarchive.dev
+    pkg-config
+    zlib.dev
+    openssl.dev
   ];
 
   postPatch = ''
