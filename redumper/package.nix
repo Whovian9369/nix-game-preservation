@@ -13,13 +13,13 @@
 
 llvmPackages_18.libcxxStdenv.mkDerivation {
   pname = "redumper";
-  version = "b683";
+  version = "b685";
 
   src = fetchFromGitHub {
     owner = "superg";
     repo = "redumper";
-    rev = "2719903e8c62eedefd6231b7b45d4a9623152bb6";
-    hash = "sha256-H6icBvXmoTXliMW41TAZMoV4wEXRjYFH4E7DlGlwWcI=";
+    rev = "cfad4293215c4d9a2c00797ae9e4c3df8a6e7c70";
+    hash = "sha256-bh4LdvueOeAxqNEZ0jpuZG5kZ7xyWz/j0ZIlXi+m1n8=";
   };
 
   cmakeBuildType = "${build_type}";
