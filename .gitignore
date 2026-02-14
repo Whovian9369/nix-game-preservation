@@ -4,3 +4,5 @@
   # Symlinks for Dotnet dependency file generation
 *.log
   # Log files for debugging
+Notes.txt
+  # Just some notes that don't necessarily need pushed.
