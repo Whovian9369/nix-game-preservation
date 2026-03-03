@@ -41,8 +41,8 @@ llvmPackages_18.libcxxStdenv.mkDerivation {
     # Fix version datestamp to date of `src.rev` commit.
     # It would be nice if I was able to automate this.
     (lib.cmakeFeature "REDUMPER_VERSION_MAJOR" "2026") # Year
-    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "02") # Month
-    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "17") # Day
+    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "03") # Month
+    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "01") # Day
     (lib.cmakeFeature "REDUMPER_VERSION_BUILD" "NixOS")
   ];
 
