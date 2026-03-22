@@ -7,13 +7,13 @@
 
 buildDotnetModule {
   pname = "binaryobjectscanner";
-  version = "3.5.0-unstable-2026-02-11";
+  version = "3.5.0-unstable-2026-03-17";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "BinaryObjectScanner";
-    rev = "9be63e9e9ab65c90d1fc4a8266a10c809a10a4ab";
-    hash = "sha256-/eBRQaUsyZt+Let9qqg+szkvjtZIarnd+yIToKNtFRE=";
+    rev = "384db5dcf40d5d8971d4f315d885a269796e05f9";
+    hash = "sha256-FxPUbOfHAE2c5zKRYJ9ljAFgZqUop2qSCfcz95vcgBE=";
     fetchSubmodules = true;
     leaveDotGit = false;
   };
