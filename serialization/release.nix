@@ -7,13 +7,13 @@
 
 buildDotnetModule rec {
   pname = "sabretools-serialization";
-  version = "2.2.1";
+  version = "2.3.0";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "SabreTools.Serialization";
     rev = version;
-    hash = "sha256-fo1VQ1VVHge3tvj1cTwZ1snuK777BLLj2TYK+s2IMjg=";
+    hash = "sha256-L9mfSZnGZIcySQWTC4O7ohRNm9zYtJxdKerlPqv1jvg=";
     fetchSubmodules = true;
     leaveDotGit = false;
   };

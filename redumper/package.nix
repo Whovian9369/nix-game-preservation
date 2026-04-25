@@ -9,17 +9,18 @@
   # and `MinSizeRel`
   # Usually set to "Release" for GitHub Actions use, so that's what it's set to
   # by default here.
+  gtest
 }:
 
 llvmPackages_18.libcxxStdenv.mkDerivation {
   pname = "redumper";
-  version = "b705";
+  version = "b716";
 
   src = fetchFromGitHub {
     owner = "superg";
     repo = "redumper";
-    rev = "101f4a6c21520311df422a87372d8b277159352a";
-    hash = "sha256-g824KEdIK/B1DtNPe09AL839DTKeE3xy+NbI1DOkm+U=";
+    rev = "edb4a09fe10ffb847bbf80c61585c6857ca00848";
+    hash = "sha256-fco81TNJfa2O0TflBXRfjL0utKeYkE7051syJJkjYTU=";
   };
 
   cmakeBuildType = "${build_type}";
@@ -38,11 +39,13 @@ llvmPackages_18.libcxxStdenv.mkDerivation {
   cmakeFlags = [
     (lib.cmakeBool "CMAKE_BUILD_WITH_INSTALL_RPATH" true)
 
+    (lib.cmakeFeature "FETCHCONTENT_SOURCE_DIR_GOOGLETEST" "${gtest.src}")
+
     # Fix version datestamp to date of `src.rev` commit.
     # It would be nice if I was able to automate this.
     (lib.cmakeFeature "REDUMPER_VERSION_MAJOR" "2026") # Year
-    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "03") # Month
-    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "01") # Day
+    (lib.cmakeFeature "REDUMPER_VERSION_MINOR" "04") # Month
+    (lib.cmakeFeature "REDUMPER_VERSION_PATCH" "24") # Day
     (lib.cmakeFeature "REDUMPER_VERSION_BUILD" "NixOS")
   ];
 
