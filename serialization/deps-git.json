@@ -21,13 +21,13 @@
   },
   {
     "pname": "GrindCore",
-    "version": "0.7.0",
-    "hash": "sha256-PyHm0EVmBovIPcAPJWGiBLjhk1ZfNjNx6CKgtlEjKSU="
+    "version": "0.7.1",
+    "hash": "sha256-KcEiYzJ8gqNnwUa7FgQ9L0MmKD1eCQ2B+FIuQYU9jXk="
   },
   {
     "pname": "GrindCore.SharpCompress",
-    "version": "0.46.2",
-    "hash": "sha256-mwfsWOqOHijb1EhMkGii/OtuitSLyamHWFxR6emAsVo="
+    "version": "0.48.0",
+    "hash": "sha256-JEDVQr/NlKvHqrhI3wwBCMvp7S+OOsTxwroZjI6lDFo="
   },
   {
     "pname": "Microsoft.AspNetCore.App.Ref",
@@ -521,8 +521,8 @@
   },
   {
     "pname": "SabreTools.IO",
-    "version": "2.0.0",
-    "hash": "sha256-LEZNVA0GXBFTlwZBJOmXJmuFyrpeqAFuP55sHags6eM="
+    "version": "2.1.0",
+    "hash": "sha256-HHBE1emQ4qYWxfgvwjneSNmwju78kTJzyLDTsJQRSDQ="
   },
   {
     "pname": "System.Buffers",
@@ -555,6 +555,11 @@
     "hash": "sha256-tDbCCtsmw1O8G9QvH2wyJtF7txxt6lpBy35w5rVZ800="
   },
   {
+    "pname": "System.Text.Encoding.CodePages",
+    "version": "10.0.8",
+    "hash": "sha256-F8rdG7ij63uwloRXSEPRW3csF+QOHq8Y5utitNQRgyM="
+  },
+  {
     "pname": "System.Threading.Tasks.Extensions",
     "version": "4.6.3",
     "hash": "sha256-GrySx1F6Ah6tfnnQt/PHC+dbzg+sfP47OOFX0yJF/xo="
@@ -563,5 +568,10 @@
     "pname": "System.ValueTuple",
     "version": "4.6.1",
     "hash": "sha256-Hb87MPcNdHQRlREDzFEKU8ZqtKN26bjyAiimJmm6LWI="
+  },
+  {
+    "pname": "System.ValueTuple",
+    "version": "4.6.2",
+    "hash": "sha256-dv0ONmorkGVf0V1Vewt5UEGXdINYy1eP4xk/bZe92ao="
   }
 ]
