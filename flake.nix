@@ -49,7 +49,7 @@
     # Redumper
       redumper = self.packages.x86_64-linux.redumper-release;
       redumper-release = pkgs.callPackage redumper/release.nix {};
-      redumper-git = pkgs.callPackage redumper/package.nix {};
+      # redumper-git = pkgs.callPackage redumper/package.nix {};
 
     # SabreTools
       sabretools = self.packages.x86_64-linux.sabretools-release;

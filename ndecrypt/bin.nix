@@ -36,7 +36,7 @@ stdenvNoCC.mkDerivation rec {
     install -Dm755 NDecrypt -T $out/bin/ndecrypt
     wrapProgram $out/bin/ndecrypt \
       --set DOTNET_SYSTEM_GLOBALIZATION_INVARIANT 1 \
-      --set DOTNET_ROOT ${dotnetCorePackages.runtime_9_0} \
+      --set DOTNET_ROOT ${dotnetCorePackages.runtime_10_0} \
       --set LD_LIBRARY_PATH ${lib.makeLibraryPath [ openssl ]}
     runHook postInstall
   '';

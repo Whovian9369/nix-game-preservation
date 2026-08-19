@@ -2,8 +2,9 @@
   lib,
   fetchFromGitHub,
   cmake,
-  ninja,
+  gtest,
   llvmPackages_18,
+  ninja,
   build_type ? "Release",
   # Typical `build_type` values include `Debug`, `Release`, `RelWithDebInfo`
   # and `MinSizeRel`
@@ -13,13 +14,13 @@
 
 llvmPackages_18.libcxxStdenv.mkDerivation {
   pname = "redumper";
-  version = "b726";
+  version = "b744";
 
   src = fetchFromGitHub {
     owner = "superg";
     repo = "redumper";
-    rev = "cbf7c9be944e9cfde84116a2651324e736beb6d5";
-    hash = "sha256-887r4SatrybmG4tSJRLpOQNcxwvMVF0iTZoWWNQ4m8A=";
+    rev = "1874b39958ebd01531dd8b7a566d22e95d3d9fda";
+    hash = "sha256-AUB1frcvGzIlhDyLcOqUYEOR6WX3Yikpj/91knklWYc=";
   };
 
   cmakeBuildType = "${build_type}";
@@ -37,8 +38,7 @@ llvmPackages_18.libcxxStdenv.mkDerivation {
 
   cmakeFlags = [
     (lib.cmakeBool "CMAKE_BUILD_WITH_INSTALL_RPATH" true)
-    # Hardcode "Do Not Manually Install gtest" flag
-    (lib.cmakeBool "INSTALL_GTEST" false)
+    (lib.cmakeFeature "FETCHCONTENT_SOURCE_DIR_GOOGLETEST" "${gtest.src}")
 
     # Fix version datestamp to date of `src.rev` commit.
     # It would be nice if I was able to automate this.
