@@ -7,13 +7,13 @@
 
 buildDotnetModule rec {
   pname = "ndecrypt";
-  version = "0.5.1";
+  version = "0.6.0";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "NDecrypt";
     tag = "${version}";
-    hash = "sha256-kTtsfi1t+FOwsL3gxxBSIvv/H7IE/7I7P+UcCMg7KeY=";
+    hash = "sha256-QLnhbNhEeSUQywMIuruvy3y/wBkdlkfdgRrTNSCa6qQ=";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_10_0;

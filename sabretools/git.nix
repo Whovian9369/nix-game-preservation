@@ -7,13 +7,13 @@
 
 buildDotnetModule {
   pname = "sabretools";
-  version = "1.2.1-unstable-2026-08-11";
+  version = "1.2.1-unstable-2026-08-31";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "SabreTools";
-    rev = "609ee77474d6ae0a8c0ce1c315980f78f07316e8";
-    hash = "sha256-cxzJYe6JYf0/6wRKqt3h8S/YxhryRWMSw3rB1o1KYC4=";
+    rev = "f040e597051bd395be94356c499f25bc7c6e26d3";
+    hash = "sha256-/HD3bOzy3JccIUT2wQr9BFT2jZ3IwQsnCPqaBsQs/h0=";
     fetchSubmodules = true;
     leaveDotGit = false;
   };
