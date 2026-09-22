@@ -7,13 +7,13 @@
 
 buildDotnetModule {
   pname = "unshieldsharp";
-  version = "3.0.0-unstable-2026-08-31";
+  version = "3.0.0-unstable-2026-09-21";
 
   src = fetchFromGitHub {
     owner = "mnadareski";
     repo = "UnshieldSharp";
-    rev = "272e958dc533c13619f80258d013642765fa1450";
-    hash = "sha256-m30JJmO41G8gwdJ3fCJutPFMQP3y/cE68KJJqmhYFQQ=";
+    rev = "496b886d852b44db7485d1e6b87c987707092356";
+    hash = "sha256-ka6bTpIIBHp1R9PrhtgDQ3r9Z289r1Y4sxy7LOlDFu8=";
   };
 
   buildType = "Debug";
