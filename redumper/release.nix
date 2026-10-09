@@ -7,11 +7,11 @@
 
 stdenvNoCC.mkDerivation rec {
   name = "redumper-bin-b${version}";
-  version = "752";
+  version = "760";
 
   src = fetchzip {
     url = "https://github.com/superg/redumper/releases/download/b${version}/redumper-b${version}-linux-x64.zip";
-    hash = "sha256-JGhQ38S5rixhYIRlu8tCW7RlsLIxoOQaDks4WEdY1J0=";
+    hash = "sha256-oaYKa1k2fp6ntWuEUacxZ8gwsJHFojVdEKFeeV77XRc=";
   };
 
   installPhase = ''
