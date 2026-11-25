@@ -7,13 +7,13 @@
 
 buildDotnetModule {
   pname = "binaryobjectscanner";
-  version = "3.9.0-unstable-2026-09-21";
+  version = "3.10.0-unstable-2026-11-22";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "BinaryObjectScanner";
-    rev = "f83dbee1b1c95cec30208fc643f1603e6448c6f6";
-    hash = "sha256-6S227gBq0LgHSw9mGN/75xvlM2ifBkP18e6Lz7CCOz8=";
+    rev = "dd86cd813de5302adf95d7b14f1545ad5d4bbe99";
+    hash = "sha256-p+qWC1jbE3AFnHfK3qvDLXaSjyVXVqTx8N5O1hroAuw=";
     fetchSubmodules = true;
     leaveDotGit = false;
   };
@@ -23,6 +23,7 @@ buildDotnetModule {
   nugetDeps = ./deps.json;
   projectFile = [ "ProtectionScan/ProtectionScan.csproj" ];
   selfContainedBuild = false;
+  dotnetFlags = [ "-p:TargetFrameworks=net10.0" ];
   dotnetBuildFlags = [ "--framework net10.0" ];
   dotnetInstallFlags = [ "--framework net10.0" ];
 

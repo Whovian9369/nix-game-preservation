@@ -7,13 +7,13 @@
 
 buildDotnetModule rec {
   pname = "sabretools-serialization";
-  version = "3.2.0";
+  version = "3.3.0";
 
   src = fetchFromGitHub {
     owner = "SabreTools";
     repo = "SabreTools.Serialization";
     tag = version;
-    hash = "sha256-r27vSVJ+bYRxGLeUChyt+UFQtQ8kKphn9Vvp11gbIIk=";
+    hash = "sha256-clVPvzJ8+XCil4eXsXAaJeRsgPk4KZi3M5+TmEqnA2A=";
     fetchSubmodules = true;
     leaveDotGit = false;
   };
@@ -23,6 +23,7 @@ buildDotnetModule rec {
   nugetDeps = ./deps-release.json;
   projectFile = [ "ExtractionTool/ExtractionTool.csproj" "InfoPrint/InfoPrint.csproj" ];
   selfContainedBuild = false;
+  dotnetFlags = [ "-p:TargetFrameworks=net10.0" ];
   dotnetBuildFlags = [ "--framework net10.0" ];
   dotnetInstallFlags = [ "--framework net10.0" ];
 

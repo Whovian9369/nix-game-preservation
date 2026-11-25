@@ -7,13 +7,13 @@
 
 buildDotnetModule rec {
   pname = "unshieldsharp";
-  version = "3.0.0";
+  version = "3.1.0";
 
   src = fetchFromGitHub {
     owner = "mnadareski";
     repo = "UnshieldSharp";
     tag = "${version}";
-    hash = "sha256-m30JJmO41G8gwdJ3fCJutPFMQP3y/cE68KJJqmhYFQQ=";
+    hash = "sha256-5mSzsJZvYYHA8rtPN8luFTRyjS4LVzpb51QvNT2C3F4=";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_10_0;
@@ -21,6 +21,7 @@ buildDotnetModule rec {
   nugetDeps = ./deps-release.json;
   projectFile = "UnshieldSharp/UnshieldSharp.csproj";
   selfContainedBuild = false;
+  dotnetFlags = [ "-p:TargetFrameworks=net10.0" ];
   dotnetBuildFlags = [ "--framework net10.0" ];
   dotnetInstallFlags = [ "--framework net10.0" ];
 
