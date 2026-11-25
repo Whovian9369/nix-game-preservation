@@ -16,14 +16,14 @@ buildDotnetModule rec {
     hash = "sha256-5mSzsJZvYYHA8rtPN8luFTRyjS4LVzpb51QvNT2C3F4=";
   };
 
-  dotnet-sdk = dotnetCorePackages.sdk_10_0;
-  dotnet-runtime = dotnetCorePackages.runtime_10_0;
+  dotnet-sdk = dotnetCorePackages.sdk_11_0;
+  dotnet-runtime = dotnetCorePackages.runtime_11_0;
   nugetDeps = ./deps-release.json;
   projectFile = "UnshieldSharp/UnshieldSharp.csproj";
   selfContainedBuild = false;
-  dotnetFlags = [ "-p:TargetFrameworks=net10.0" ];
-  dotnetBuildFlags = [ "--framework net10.0" ];
-  dotnetInstallFlags = [ "--framework net10.0" ];
+  dotnetFlags = [ "-p:TargetFrameworks=net11.0" ];
+  dotnetBuildFlags = [ "--framework net11.0" ];
+  dotnetInstallFlags = [ "--framework net11.0" ];
 
   executables = [ "UnshieldSharp" ];
 

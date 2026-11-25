@@ -1,0 +1,13 @@
+diff --git a/BinaryObjectScanner/BinaryObjectScanner.csproj b/BinaryObjectScanner/BinaryObjectScanner.csproj
+index e41a52fc..1fead1e5 100644
+--- a/BinaryObjectScanner/BinaryObjectScanner.csproj
++++ b/BinaryObjectScanner/BinaryObjectScanner.csproj
+@@ -14,7 +14,7 @@
+         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+         <Version>3.10.0</Version>
+-        <WarningsNotAsErrors>NU5104</WarningsNotAsErrors>
++        <WarningsNotAsErrors>NU5104, NU1510</WarningsNotAsErrors>
+ 
+         <!-- Package Properties -->
+         <Authors>Matt Nadareski</Authors>

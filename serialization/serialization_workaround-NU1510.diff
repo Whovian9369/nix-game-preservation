@@ -1,0 +1,12 @@
+diff --git a/ExtractionTool/ExtractionTool.csproj b/ExtractionTool/ExtractionTool.csproj
+index 4f5b7fc3..70b2dbad 100644
+--- a/ExtractionTool/ExtractionTool.csproj
++++ b/ExtractionTool/ExtractionTool.csproj
+@@ -11,6 +11,7 @@
+         <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+         <Version>3.3.0</Version>
++        <WarningsNotAsErrors>NU1510</WarningsNotAsErrors>
+ 
+         <!-- Publishing -->
+         <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>

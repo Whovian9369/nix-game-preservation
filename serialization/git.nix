@@ -18,14 +18,19 @@ buildDotnetModule {
     leaveDotGit = false;
   };
 
-  dotnet-sdk = dotnetCorePackages.sdk_10_0;
-  dotnet-runtime = dotnetCorePackages.runtime_10_0;
+  patches = [
+    # Work around NU1510 being thrown.
+    ./serialization_workaround-NU1510.diff
+  ];
+
+  dotnet-sdk = dotnetCorePackages.sdk_11_0;
+  dotnet-runtime = dotnetCorePackages.runtime_11_0;
   nugetDeps = ./deps-git.json;
   projectFile = [ "ExtractionTool/ExtractionTool.csproj" "InfoPrint/InfoPrint.csproj" ];
   selfContainedBuild = false;
-  dotnetFlags = [ "-p:TargetFrameworks=net10.0" ];
-  dotnetBuildFlags = [ "--framework net10.0" ];
-  dotnetInstallFlags = [ "--framework net10.0" ];
+  dotnetFlags = [ "-p:TargetFrameworks=net11.0" ];
+  dotnetBuildFlags = [ "--framework net11.0" ];
+  dotnetInstallFlags = [ "--framework net11.0" ];
 
   executables = [ "ExtractionTool" "InfoPrint" ];
 
